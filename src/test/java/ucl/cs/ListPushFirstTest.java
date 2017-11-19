@@ -31,4 +31,13 @@ public class ListPushFirstTest {
         assertThat(example.listSize(), is(1));
         assertThat(example.retrieveItem(0), is("42") );
     }
+    @Test
+    public void itemDuplicated()
+    {
+        example. addToList("42");
+        example. addToList("43");
+        example. addToList("42");
+        assertThat(example.listSize(), is(2));
+        assertThat(example.retrieveItem(1), is("43"));
+    }
 }

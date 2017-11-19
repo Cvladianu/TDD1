@@ -26,7 +26,16 @@ public class ListPushFirst {
     }
 
     public void addToList(String n) {
+        removeFromList(aList.indexOf(n));
+
         this.aList.add(0, n);
+    }
+
+    private void removeFromList(int index)
+    {
+        if(index==-1)
+            return;
+        aList.remove(index);
     }
 
     public String retrieveItem(int n)
