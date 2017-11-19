@@ -3,7 +3,7 @@ package ucl.cs;
 import java.util.ArrayList;
 
 public class Example {
-  private ArrayList<Integer> aList;
+  private ArrayList<String> aList;
 
   public Example() {
     this.aList = new ArrayList<>();
@@ -13,19 +13,19 @@ public class Example {
     return this.aList.size();
   }
 
-  public ArrayList<Integer> getaList() {
+  public ArrayList<String> getaList() {
     return aList;
   }
 
-  public void setaList(ArrayList<Integer> aList) {
+  public void setaList(ArrayList<String> aList) {
     this.aList = aList;
   }
 
-  public void addToList(int n) {
+  public void addToList(String n) {
     this.aList.add(this.listSize(), n);
   }
 
-  public int retrieveItem(int n)
+  public String retrieveItem(int n)
   {
     return aList.get(n);
   }

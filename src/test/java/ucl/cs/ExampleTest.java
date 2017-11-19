@@ -14,15 +14,15 @@ public class ExampleTest {
 
   @Test
   public void itemAddedToList(){
-    example. addToList(42);
-    example. addToList(43);
+    example. addToList("42");
+    example. addToList("43");
     assertThat(example.listSize(), is(2));
   }
 
   @Test
   public void itemRetrievedFromList(){
-    example. addToList(42);
+    example. addToList("42");
     assertThat(example.listSize(), is(1));
-    assertThat(example.retrieveItem(0), is(42) );
+    assertThat(example.retrieveItem(0), is("42") );
   }
 }
