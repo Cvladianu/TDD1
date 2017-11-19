@@ -6,10 +6,23 @@ import static org.hamcrest.core.Is.is;
 import org.junit.Test;
 
 public class ExampleTest {
-
+  Example example = new Example();
   @Test
-  public void canAnswerTheUniversalQuestion() {
-    assertThat(new Example().answer(), is(42));
+  public void listIsEmptyOnCreation() {
+    assertThat(example.listSize(), is(0));
   }
 
+  @Test
+  public void itemAddedToList(){
+    example. addToList(42);
+    example. addToList(43);
+    assertThat(example.listSize(), is(2));
+  }
+
+  @Test
+  public void itemRetrievedFromList(){
+    example. addToList(42);
+    assertThat(example.listSize(), is(1));
+    assertThat(example.retrieveItem(0), is(42) );
+  }
 }
