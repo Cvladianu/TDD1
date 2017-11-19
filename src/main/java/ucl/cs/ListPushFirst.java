@@ -1,14 +1,15 @@
 package ucl.cs;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 /**
  * Created by cosmi_owugxv5 on 11/19/2017.
  */
-public class ListDeque {
+public class ListPushFirst {
     private ArrayList<String> aList;
 
-    public ListDeque() {
+    public ListPushFirst() {
         this.aList = new ArrayList<>();
     }
 
@@ -25,7 +26,7 @@ public class ListDeque {
     }
 
     public void addToList(String n) {
-        this.aList.add(this.listSize(), n);
+        this.aList.add(0, n);
     }
 
     public String retrieveItem(int n)

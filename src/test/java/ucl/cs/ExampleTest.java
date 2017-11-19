@@ -6,7 +6,7 @@ import static org.hamcrest.core.Is.is;
 import org.junit.Test;
 
 public class ExampleTest {
-  Example example = new Example();
+  ListPushFirst example = new ListPushFirst();
   @Test
   public void listIsEmptyOnCreation() {
     assertThat(example.listSize(), is(0));
